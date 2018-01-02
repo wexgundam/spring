@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.mose</groupId>
+    <artifactId>spring</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spirng-springframework</module>
+    </modules>
+    <packaging>pom</packaging>
+    <name>org.mose.spring</name>
+    <url>https://github.com/wexgundam/org.mose.spring</url>
+
+    <properties>
+        <common.springboot.version>1.5.8.RELEASE</common.springboot.version>
+        <common.fileupload.version>1.3.1</common.fileupload.version>
+        <common.sitemesh.version>3.0.1</common.sitemesh.version>
+        <common.druid.version>1.0.25</common.druid.version>
+        <common.net.version>3.6</common.net.version>
+        <common.mysql.version>5.1.44</common.mysql.version>
+        <common.httpclient.version>4.5.2</common.httpclient.version>
+        <common.ehcache.version>2.10.2</common.ehcache.version>
+        <commone.janino.version>3.0.7</commone.janino.version>
+        <common.poi.version>3.14</common.poi.version>
+        <common.spring-session.version>1.3.1.RELEASE</common.spring-session.version>
+        <common.cache.version>1.0.0</common.cache.version>
+        <common.ehcache.version>3.4.0</common.ehcache.version>
+        <common.junit.version>4.12</common.junit.version>
+
+        <common.thymeleaf.version>3.0.9.RELEASE</common.thymeleaf.version>
+        <common.thymeleaf-layout-dialect.version>2.2.2</common.thymeleaf-layout-dialect.version>
+        <common.thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</common.thymeleaf-extras-springsecurity4.version>
+        <common.thymeleaf-extras-java8time.version>3.0.1.RELEASE</common.thymeleaf-extras-java8time.version>
+        <common.thymeleaf-extras-conditionalcomments.version>2.1.2.RELEASE
+        </common.thymeleaf-extras-conditionalcomments.version>
+        <common.thymeleaf-extras-data-attribute.version>2.0.1</common.thymeleaf-extras-data-attribute.version>
+        <common.thymeleaf-spring4.version>3.0.9.RELEASE</common.thymeleaf-spring4.version>
+        <common.thymeleaf-spring5.version>3.0.9.RELEASE</common.thymeleaf-spring5.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Begin Spring boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${common.springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- End Spring boot -->
+
+            <!-- Begin Database -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${common.druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${common.mysql.version}</version>
+            </dependency>
+            <!-- End Database -->
+
+            <!-- Begin redis -->
+            <dependency>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session</artifactId>
+                <version>${common.spring-session.version}</version>
+            </dependency>
+            <!-- End redis -->
+
+            <!-- Begin sitemesh -->
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>${common.sitemesh.version}</version>
+            </dependency>
+            <!-- End sitemesh -->
+
+            <!-- Begin commons fileupload -->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${common.fileupload.version}</version>
+            </dependency>
+            <!-- End commons fileupload -->
+
+            <!-- Begin http client -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${common.httpclient.version}</version>
+            </dependency>
+            <!-- End http client -->
+
+            <!-- Begin apache commons net -->
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${common.net.version}</version>
+            </dependency>
+            <!-- End apache commons net -->
+
+            <!-- Begin EHCache -->
+            <dependency>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${common.cache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${common.ehcache.version}</version>
+            </dependency>
+            <!-- End EHCache -->
+
+            <!-- Begin POI -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${common.poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${common.poi.version}</version>
+            </dependency>
+            <!-- End POI -->
+
+            <!-- Begin Thymeleaf -->
+            <dependency>
+                <groupId>org.thymeleaf</groupId>
+                <artifactId>thymeleaf</artifactId>
+                <version>${common.thymeleaf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>nz.net.ultraq.thymeleaf</groupId>
+                <artifactId>thymeleaf-layout-dialect</artifactId>
+                <version>${common.thymeleaf-layout-dialect.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+                <version>${common.thymeleaf-extras-springsecurity4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-java8time</artifactId>
+                <version>${common.thymeleaf-extras-java8time.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-conditionalcomments</artifactId>
+                <version>${common.thymeleaf-extras-conditionalcomments.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.mxab.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-data-attribute</artifactId>
+                <version>${common.thymeleaf-extras-data-attribute.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.thymeleaf</groupId>
+                <artifactId>thymeleaf-spring4</artifactId>
+                <version>${common.thymeleaf-spring4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.thymeleaf</groupId>
+                <artifactId>thymeleaf-spring5</artifactId>
+                <version>${common.thymeleaf-spring5.version}</version>
+            </dependency>
+            <!-- End Thymeleaf -->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>org.mose.spring</finalName>
+    </build>
+</project>
